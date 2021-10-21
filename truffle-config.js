@@ -19,6 +19,8 @@
  */
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
+require("dotenv").config();
+
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
@@ -50,12 +52,12 @@ module.exports = {
     optimistic_kovan: {
       network_id: 69,
       chain_id: 69,
+      gasPrice: 10000,
+      from: process.env.ADDRESS,
       provider: function () {
         return new HDWalletProvider(
-          process.env.MNEMONIC,
-          "https://optimism-kovan.infura.io/v3/" + process.env.API_KEY,
-          0,
-          1
+          process.env.PRIVATE_KEY,
+          "https://optimism-kovan.infura.io/v3/" + process.env.API_KEY
         );
       },
     },
@@ -104,6 +106,10 @@ module.exports = {
       //  evmVersion: "byzantium"
       // }
     },
+  },
+  plugins: ["truffle-plugin-verify"],
+  api_keys: {
+    etherscan: process.env.API_KEY,
   },
 
   // Truffle DB is currently disabled by default; to enable it, change enabled: false to enabled: true

@@ -37,5 +37,18 @@ Then, add needed dependencies:
       },
     }"
     - Setup env and gitignore
+    - Add address and funded OP Kovan private key to env - security best practices
 3. Wallet/User config for deploying to OP Kovan
     `npm i --save-dev @truffle/hdwallet-provider`
+
+After the above is done, deploy to Optimism Kovan with:
+`truffle migrate --network optimistic_kovan`
+
+and then validate on etherscan (optionally):
+npm i --save-dev sol-merger
+add this to npm scripts:
+`    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build/mergedContracts"
+`
+
+
+

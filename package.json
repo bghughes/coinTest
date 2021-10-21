@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "truffle test",
-    "ganache": "ganache-cli --gasLimit=0x1fffffffffffff --gasPrice=0x1 --allowUnlimitedContractSize --defaultBalanceEther 9000"
+    "ganache": "ganache-cli --gasLimit=0x1fffffffffffff --gasPrice=0x1 --allowUnlimitedContractSize --defaultBalanceEther 9000",
+    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build/mergedContracts"
   },
   "keywords": [
     "coin"
@@ -17,6 +18,11 @@
   "license": "ISC",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.3.2",
-    "@truffle/hdwallet-provider": "^1.5.1"
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "sol-merger": "^3.1.0",
+    "truffle-plugin-verify": "^0.5.15"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
   }
 }
