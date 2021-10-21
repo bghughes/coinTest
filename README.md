@@ -1,0 +1,1 @@
+This is a test repository with a bare bones ERC-20 contract created from scratch.
