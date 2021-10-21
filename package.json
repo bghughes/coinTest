@@ -7,11 +7,16 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "test": "truffle test",
+    "ganache": "ganache-cli --gasLimit=0x1fffffffffffff --gasPrice=0x1 --allowUnlimitedContractSize --defaultBalanceEther 9000"
   },
   "keywords": [
     "coin"
   ],
   "author": "Benjamin Hughes",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "@truffle/hdwallet-provider": "^1.5.1"
+  }
 }
