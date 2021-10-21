@@ -1,11 +1,11 @@
-This is a test repository with a bare bones ERC-20 contract created from scratch.
+This is a test repository with a bare bones ERC-20 contract created from scratch and deployed to Optimistic Kovan.
 
 Pre-requisites:
-- Truffle ()
-- Git CLI ()
-- NPM ()
+- Truffle (https://www.trufflesuite.com/docs/truffle/getting-started/installation)
+- Git CLI (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git or just google for your OS)
+- NPM (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-From scratch:
+Building this repo from scratch, steps:
 
 First, create a new directory:
 
@@ -29,10 +29,8 @@ Then, add needed dependencies:
       chain_id: 69,
       provider: function () {
         return new HDWalletProvider(
-          process.env.MNEMONIC,
-          "https://optimism-kovan.infura.io/v3/" + process.env.API_KEY,
-          0,
-          1
+          process.env.PRIVATE_KEY,
+          "https://optimism-kovan.infura.io/v3/" + process.env.API_KEY
         );
       },
     }"
