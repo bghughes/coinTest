@@ -1,0 +1,17 @@
+{
+  "name": "cointest",
+  "version": "1.0.0",
+  "description": "Test coin package for UT blockchain",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "keywords": [
+    "coin"
+  ],
+  "author": "Benjamin Hughes",
+  "license": "ISC"
+}
